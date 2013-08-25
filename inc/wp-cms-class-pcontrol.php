@@ -119,7 +119,7 @@ class wpcms_pcontrol_engine {
 
 
 	/**
-	* Can reuse for things like no flash
+	* Can reuse for things
 	*
 	* @since 2.1
 	* @lastupdate 2.1
@@ -129,7 +129,18 @@ class wpcms_pcontrol_engine {
 	function pccore_false() {
 		return false;
 	}
-
+	
+	/**
+	* Can reuse for things
+	*
+	* @since 2.1
+	* @lastupdate 2.7
+	*
+	* @return false
+	*/	
+	function return_0( ) {
+		return 0;
+	}
 
 
 	/**
