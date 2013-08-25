@@ -146,6 +146,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Changelog ==
 
+= 2.7 =
+* 25th August 2013
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Code update required to support WordPress 3.6x revisions
+
 = 2.6 =
 * 10th July 2013
 * REQUIRES WORDPRESS 3.5 OR ABOVE
@@ -281,7 +286,10 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Upgrade Notice ==
 
-= 2.5 =
+= 2.7 =
+REQUIRES WORDPRESS 3.6 or above, fixes revisions controls.
+
+= 2.6 =
 REQUIRES WORDPRESS 3.5 or above, new controls and small snag catches.
 
 = 2.5 =
