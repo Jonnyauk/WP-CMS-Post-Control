@@ -119,20 +119,6 @@ class wpcms_pcontrol_engine {
 
 
 	/**
-	* Can reuse for things like no flash
-	*
-	* @since 2.1
-	* @lastupdate 2.1
-	*
-	* @return false
-	*/
-	function pccore_false() {
-		return false;
-	}
-
-
-
-	/**
 	* Returns user role of logged in user
 	*
 	* @since 2.0

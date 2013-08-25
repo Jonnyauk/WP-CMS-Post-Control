@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP-CMS Post Control
-Version: 2.6
+Version: 2.7
 Plugin URI: http://wp-cms.com/our-wordpress-plugins/wp-cms-post-control-plugin/
 Description: Hides unwanted items within the write/edit screens and options for each user role. Also controls autosave, revisions and flash uploader.
 Author: Jonny Allbut
@@ -9,22 +9,25 @@ Author URI: http://jonnya.net
 License: GPL
 */
 
-/****
+/*
 
 View readme.txt in this directory for full documentation or view documentation online at http://wordpress.org/extend/plugins/wp-cms-post-control
 Official download repository: http://wordpress.org/extend/plugins/wp-cms-post-control - The latest version (and all older versions) of Post Control should always be downloaded from here only.
 
 NOTE COMPATIBILITY VERSIONS
-v2.6 - Latest version - tested against WordPress 3.5.2
-v2.5 - Latest version - requires WordPress 3.1 minimum
+ 
 - The latest version of this plugin always supports the current latest public release of WordPress
 - Compatibility with older versions is not supported
 - You really should upgrade your version of WordPress to make it faster, secure and get more features!
+
+v2.7 - Latest version - tested against WordPress 3.6
+v2.6 - Last version to be compatible with WordPress 3.5x (no longer supported)
+v2.5 - Last version to be compatible with WordPress 3.4x (no longer supported)
 v2.4 - Last version to be compatible with WordPress 3.0x (no longer supported)
 v2.22 - Last version to be compatible with WordPress 2.9x (no longer supported)
 v1.21 - Last version to be compatible with WordPress 2.8x (no longer supported)
 
-****/
+*/
 
 include("inc/wp-cms-class-pcontrol.php");
 
@@ -67,7 +70,7 @@ function wpcms_pcontrol_run() {
 * Run Post Control extended functions
 *
 * @since 2.1
-* @lastupdate 2.12
+* @lastupdate 2.7
 *
 */
 function wpcms_pcontrol_ex_init(){
@@ -82,11 +85,7 @@ function wpcms_pcontrol_ex_init(){
 		foreach ($options as $key => $value) {
 
 			if ( $key == 'revisions' && $value == 'off' ) {
-				@remove_action ( 'pre_post_update', 'wp_save_post_revision' );
-			}
-
-			if ( $key == 'flashupload' && $value == 'off' ) {
-				add_filter('flash_uploader', array($ex_doit, 'pccore_false'), 5);
+				add_filter( 'wp_revisions_to_keep', '__return_null', 9, 2 );
 			}
 
 			if ( $key == 'autosave' && $value == 'off' ) {

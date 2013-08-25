@@ -1,9 +1,9 @@
 === WP-CMS Post Control ===
 Contributors: Jonnyauk
 Tags: post, page, metabox, autosave, revisions, CMS, Tags, Categories, Excerpt, Trackbacks, Custom fields, Discussion, Comment, ping, Author, upload, slug, featured image, format
-Requires at least: 3.5
-Tested up to: 3.5.2
-Stable tag: 2.6
+Requires at least: 3.6
+Tested up to: 3.6
+Stable tag: 2.7
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave and revisions saved.
@@ -45,10 +45,10 @@ You can control the display of the following page options:
 
 You can control the display of the following global post/page options:
 
-* Limit the number of post and page revisions saved (0-50 NEW - Increaded value by request!)
+* Limit the number of post and page revisions saved (updated for WordPress 3.6 and above)
 * Post/Page Media upload
 * Disable Autosave
-* Disable Post Revisions
+* Disable Post Revisions (updated for WordPress 3.6 and above)
 
 == Installation ==
 
@@ -75,6 +75,14 @@ If you are updating via FTP, simply delete the entire folder called `wp-cms-post
 **IMPORTANT** When you upgrade, you should go to the options page and re-save your Post Control options to refresh the settings. In most cases everything will be fine, but this will ensure that if there have been any updates to WordPress the plugin will refresh and update the relevant Post Control options.
 
 == Frequently Asked Questions ==
+= I'm using WordPress 3.6 (or above) and revisions controls don't work? =
+
+Update to plugin version 2.7 or above, it has been updated to support new revisions controls.
+
+= I'm using WordPress 3.5x and revisions controls don't work? =
+
+The last version of this plugin to support WordPress 3.5x is v2.6, you should think about upgrading when you can - we are ready for you!
+
 = My Slug and Featured image controls don't do anything? =
 
 Your WordPress theme has to specifically support these features, if they are not enabled the controls won't enable the function. Ask your theme designer to update their theme if required!
