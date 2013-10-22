@@ -1,9 +1,9 @@
 === WP-CMS Post Control ===
 Contributors: Jonnyauk
-Tags: post, page, metabox, autosave, revisions, CMS, Tags, Categories, Excerpt, Trackbacks, Custom fields, Discussion, Comment, ping, Author, upload, slug, featured image, format
+Tags: post, page, metabox, autosave, revisions, CMS, Tags, Categories, Excerpt, Trackbacks, Custom fields, Discussion, Comment, ping, Author, upload, slug, featured image, format, word count
 Requires at least: 3.6
 Tested up to: 3.6
-Stable tag: 2.7
+Stable tag: 2.8
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave and revisions saved.
@@ -15,6 +15,8 @@ Hides metabox controls on the write/edit post & page admin screens for each user
 Simplify and customise the write post and page areas of WordPress to just show the controls you need. Great for de-cluttering - do you really need those pingback and trackback options... now you can decide what each individual level of user can see and use!
 
 It also features other advanced configuration options like disable autosaves and limit the number of revisions saved.
+
+**NEW** - Remove word count on a per user basis (feature request)
 
 **NEW** - Control exactly how many revisions are saved when you are amending your content or even turn off revisions. This stops your database getting clogged up and is great when you are designing a site!
 
@@ -32,6 +34,7 @@ You can control the display of the following post options for each role level (a
 * Post Slug (NEW WordPress 3.1+ support!)
 * Post Tags
 * Post Trackbacks
+* NEW - Word count
 
 You can control the display of the following page options:
 
@@ -42,6 +45,7 @@ You can control the display of the following page options:
 * Page Featured Image (NEW WordPress 3.1+ support!)
 * Page Slug (NEW WordPress 3.1+ support!)
 * Page Revisions
+* NEW - Word count
 
 You can control the display of the following global post/page options:
 
@@ -153,6 +157,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 4. An example of a customised write/edit post - much simpler to use for all your users and clients!
 
 == Changelog ==
+
+= 2.8 =
+* 22nd October 2013
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* New option to remove word count (as per user request)
 
 = 2.7 =
 * 25th August 2013
@@ -293,6 +302,9 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Included clean-up of database on de-activation.
 
 == Upgrade Notice ==
+
+= 2.8 =
+REQUIRES WORDPRESS 3.6 or above, new control for word count.
 
 = 2.7 =
 REQUIRES WORDPRESS 3.6 or above, fixes revisions controls.
