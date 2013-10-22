@@ -3,7 +3,7 @@
 * Main options page include
 *
 * @since 2.1
-* @lastupdate 2.5
+* @lastupdate 2.8
 *
 *
 */
@@ -185,7 +185,8 @@
 
 			<?php
 			$mywpcorecontrols = array(
-			'Remove media upload' => 'media_buttons'
+			'Remove media upload' => 'media_buttons',
+			'Remove word count' => 'word_count'
 			);
 
 			//Generate form from array

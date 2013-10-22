@@ -95,11 +95,12 @@ class wpcms_pcontrol_engine {
 	}
 
 	/**
-	* Loops through array of supplied values and removes actions from WordPress ie media upload
+	* Loops through array of supplied values and removes stuff from WordPress
+	* Uses settings from advanced controls section
 	* Better to remove than just hide with CSS, people have browser CSS editors!!
 	*
 	* @since 2.0
-	* @lastupdate 2.0
+	* @lastupdate 2.8
 	*
 	*
 	* @param $whichbox = which function to remove
@@ -111,9 +112,15 @@ class wpcms_pcontrol_engine {
 		if ($whichfunc != '') {
 
 			foreach($whichfunc as $which) {
-				remove_action( ''.$which.'', ''.$which.'' );
+				if ( $which == 'word_count' ) {
+					// Get rid of specific word count JS
+					wp_deregister_script( 'word-count' );
+					// Have to hide word count with CSS even with JS removed - text still remains... grrrr!
+					add_action('admin_head', function(){ echo '<style type="text/css"> #wp-word-count { display: none; } </style>'; });
+				} else {
+					remove_action( ''.$which.'', ''.$which.'' );
+				}
 			}
-
 		}
 	}
 
