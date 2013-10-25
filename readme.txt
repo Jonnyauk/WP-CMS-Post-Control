@@ -1,9 +1,9 @@
 === WP-CMS Post Control ===
 Contributors: Jonnyauk
-Tags: post, page, metabox, autosave, revisions, CMS, Tags, Categories, Excerpt, Trackbacks, Custom fields, Discussion, Comment, ping, Author, upload, slug, featured image, format, word count
+Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count
 Requires at least: 3.6
 Tested up to: 3.6
-Stable tag: 2.8
+Stable tag: 2.81
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave and revisions saved.
@@ -79,6 +79,11 @@ If you are updating via FTP, simply delete the entire folder called `wp-cms-post
 **IMPORTANT** When you upgrade, you should go to the options page and re-save your Post Control options to refresh the settings. In most cases everything will be fine, but this will ensure that if there have been any updates to WordPress the plugin will refresh and update the relevant Post Control options.
 
 == Frequently Asked Questions ==
+
+= I'm using version 2.8 and get a parse error on activation and can't activate the plugin? =
+
+Thanks for reporting - this is due to you having an older version of PHP on your server compared to what I'm testing on. I've made the code backwards compatible in version 2.81, so update and you should be fine!
+
 = I'm using WordPress 3.6 (or above) and revisions controls don't work? =
 
 Update to plugin version 2.7 or above, it has been updated to support new revisions controls.
@@ -157,6 +162,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 4. An example of a customised write/edit post - much simpler to use for all your users and clients!
 
 == Changelog ==
+
+= 2.81 =
+* 25nd October 2013
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Improve compatibility with older versions of PHP, corrects code error from incompatible code as reported by users.
 
 = 2.8 =
 * 22nd October 2013
@@ -302,6 +312,9 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Included clean-up of database on de-activation.
 
 == Upgrade Notice ==
+
+= 2.81 =
+REQUIRES WORDPRESS 3.6 or above, IMPORTANT UPDATE FOR ALL USERS - fixes error on activation on some versions of PHP.
 
 = 2.8 =
 REQUIRES WORDPRESS 3.6 or above, new control for word count.
