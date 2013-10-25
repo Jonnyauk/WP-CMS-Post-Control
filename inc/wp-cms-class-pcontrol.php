@@ -100,7 +100,7 @@ class wpcms_pcontrol_engine {
 	* Better to remove than just hide with CSS, people have browser CSS editors!!
 	*
 	* @since 2.0
-	* @lastupdate 2.8
+	* @lastupdate 2.81
 	*
 	*
 	* @param $whichbox = which function to remove
@@ -116,12 +116,24 @@ class wpcms_pcontrol_engine {
 					// Get rid of specific word count JS
 					wp_deregister_script( 'word-count' );
 					// Have to hide word count with CSS even with JS removed - text still remains... grrrr!
-					add_action('admin_head', function(){ echo '<style type="text/css"> #wp-word-count { display: none; } </style>'; });
+					add_action('admin_head', array($this, 'pccore_css'), 10);
 				} else {
 					remove_action( ''.$which.'', ''.$which.'' );
 				}
 			}
 		}
+	}
+	
+	
+	/**
+	* Inserts CSS to hide word-count (JS is used to interact with this text, so doesn't disappear if script deregistered)
+	*
+	* @since 2.81
+	* @lastupdate 2.81
+	*
+	*/
+	function pccore_css() {
+		echo '<style type="text/css"> #wp-word-count { display: none; } </style>';
 	}
 
 
