@@ -2,8 +2,8 @@
 Contributors: Jonnyauk
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count
 Requires at least: 3.6
-Tested up to: 3.6
-Stable tag: 2.81
+Tested up to: 3.8
+Stable tag: 2.82
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave and revisions saved.
@@ -163,8 +163,13 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Changelog ==
 
+= 2.82 =
+* 24th March 2014
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Tested and verified with WordPress 3.8x
+
 = 2.81 =
-* 25nd October 2013
+* 25th October 2013
 * REQUIRES WORDPRESS 3.6 OR ABOVE
 * Improve compatibility with older versions of PHP, corrects code error from incompatible code as reported by users.
 
@@ -312,6 +317,9 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Included clean-up of database on de-activation.
 
 == Upgrade Notice ==
+
+= 2.82 =
+REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.8x
 
 = 2.81 =
 REQUIRES WORDPRESS 3.6 or above, IMPORTANT UPDATE FOR ALL USERS - fixes error on activation on some versions of PHP.
