@@ -171,7 +171,7 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 == Changelog ==
 
 = 2.9 =
-* 2nd August 2014
+* 4th August 2014
 * REQUIRES WORDPRESS 3.6 OR ABOVE
 * Tested and verified with WordPress 3.9.1
 
