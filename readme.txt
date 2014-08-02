@@ -1,12 +1,12 @@
 === WP-CMS Post Control ===
 Contributors: Jonnyauk
-Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count
+Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
 Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 2.82
+Tested up to: 3.9.1
+Stable tag: 2.9
 License: GPLv2 or later
 
-Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave and revisions saved.
+Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave, trash time and saved revisions.
 
 == Description ==
 
@@ -15,6 +15,8 @@ Hides metabox controls on the write/edit post & page admin screens for each user
 Simplify and customise the write post and page areas of WordPress to just show the controls you need. Great for de-cluttering - do you really need those pingback and trackback options... now you can decide what each individual level of user can see and use!
 
 It also features other advanced configuration options like disable autosaves and limit the number of revisions saved.
+
+**NEW** - Control number of days before trash is emtied
 
 **NEW** - Remove word count on a per user basis (feature request)
 
@@ -53,6 +55,7 @@ You can control the display of the following global post/page options:
 * Post/Page Media upload
 * Disable Autosave
 * Disable Post Revisions (updated for WordPress 3.6 and above)
+* NEW - Set the number of days before the trash is auto emptied by WordPress
 
 == Installation ==
 
@@ -64,11 +67,11 @@ Simply search for 'WP-CMS Post Control' and you can install it straight from you
 
 If you want to manually upload and install:
 
-1. Get the latest version of this plugin at the <a href="http://wordpress.org/extend/plugins/wp-cms-post-control/">official WordPress plugin directory</a>.
-2. Decompress .zip file, retaining the complete, original file structure.
+1. Get the latest version of this plugin at the <a href="http://wordpress.org/extend/plugins/wp-cms-post-control/">official WordPress plugin directory</a>
+2. Decompress .zip file, retaining the complete, original file structure
 3. Upload the whole directory `wp-cms-post-control` and all containing files to your plugins directory - normally `/wp-content/plugins/`
 4. Activate the plugin through the 'Plugins' menu in WordPress
-5. Configure options through `Settings > Post Control`
+5. Configure options through `Settings > Post Control` and `Settings > Post Control Core`
 
 = Update existing install =
 
@@ -76,9 +79,13 @@ If your server supports it, the automatic plugin update feature of WordPress is 
 
 If you are updating via FTP, simply delete the entire folder called `wp-cms-post-control` from your plugins directory and replace with the newest version.
 
-**IMPORTANT** When you upgrade, you should go to the options page and re-save your Post Control options to refresh the settings. In most cases everything will be fine, but this will ensure that if there have been any updates to WordPress the plugin will refresh and update the relevant Post Control options.
+**IMPORTANT** When you upgrade, you may need to go to the options page and re-save your Post Control options to refresh the settings. In most cases everything will be fine, but this will ensure that if there have been any updates to WordPress the plugin will refresh and update the relevant Post Control options.
 
 == Frequently Asked Questions ==
+
+= How do I delete content and not use the trash? =
+
+In plugin version 2.9 a new control was created for setting the number of posts to keep in the trash - if you don't wish to use the trash functionality set this to 0 days.
 
 = I'm using version 2.8 and get a parse error on activation and can't activate the plugin? =
 
@@ -162,6 +169,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 4. An example of a customised write/edit post - much simpler to use for all your users and clients!
 
 == Changelog ==
+
+= 2.9 =
+* 2nd August 2014
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Tested and verified with WordPress 3.9.1
 
 = 2.82 =
 * 24th March 2014
@@ -317,6 +329,9 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Included clean-up of database on de-activation.
 
 == Upgrade Notice ==
+
+= 2.9 =
+REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.9x - introduces new trash control!
 
 = 2.82 =
 REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.8x
