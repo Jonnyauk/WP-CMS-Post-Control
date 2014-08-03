@@ -297,7 +297,7 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Fix the bug introduced in v1.02 that broke the form fields
 * After comments feedback, changed and documented admin control
 
-= v1.02  =
+= v1.02 =
 * 3rd September 2008
 * Bug catches, may help plugin compatibility on different servers
 
@@ -306,12 +306,12 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Option to insert message panel
 * General tidying on admin page
 
-= v1.0  =
+= v1.0 =
 * 1st August 2008
 * Option to disable post and page revisions
 * Option to disable autosaves
 
-= v0.4  =
+= v0.4 =
 1st August 2008
 * Option to select uploader (Flash or standard)
 * Option to hide revisions control
@@ -322,11 +322,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 = v0.3 =
 * 28th July 2008
-* Introduced Admin user control.
+* Introduced Admin user control
 
 = v0.2 =
 * 26th July 2008
-* Included clean-up of database on de-activation.
+* Included clean-up of database on de-activation
 
 == Upgrade Notice ==
 
