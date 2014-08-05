@@ -124,9 +124,12 @@ function wpcms_pcontrol_ex_revisions(){
 				if ($value == 0) {
 					//Saved as unlimited so do nothing
 				} else {
-					$limit_revisions = $value;
-					define('WP_POST_REVISIONS', $limit_revisions );
+					define('WP_POST_REVISIONS', $value );
 				}
+			}
+
+			if ( $key == 'trash_num' && $value != '' ) {
+				define('EMPTY_TRASH_DAYS', $value );
 			}
 
 		}
