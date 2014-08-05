@@ -9,17 +9,17 @@ License: GPLv2 or later
 
 ### Post Control gives you complete control over your write options **for every user level/role**. It not only allows you to hide unwanted items like custom fields, trackbacks, revisions etc. but also gives you a whole lot more control over how WordPress deals with creating content.
 
-Simplify and customise the write post and page areas of WordPress to just show the controls you need. Great for de-cluttering - do you really need those pingback and trackback options... now you can decide what each individual level of user can see and use!
+Simplify and customise the write post and page areas of WordPress to show just the controls you need. Great for de-cluttering - do you really need those pingback and trackback options, not using tags, want only administrators to be able to set categories... now you can decide what each individual level of user can see and use!
 
-It also features other advanced configuration options like disable autosaves and limit the number of revisions saved.
+It also features other advanced configuration options like disable autosaves, limit the number of revisions saved and how many days before trash is auto-emptied by WordPress.
 
-**NEW** - Control number of days before trash is emtied
+**NEW** - Control number of days before trash is emptied
 
 **NEW** - Remove word count on a per user basis (feature request)
 
 **NEW** - Control exactly how many revisions are saved when you are amending your content or even turn off revisions. This stops your database getting clogged up and is great when you are designing a site!
 
-You can control the display of the following post options for each role level (administrator, editor, author and contributor):
+You can control the display of the following post options for each core WordPress role (administrator, editor, author and contributor):
 
 * Post Author (if multiple)
 * Post Categories
@@ -88,7 +88,7 @@ Changelog
 ----------------------------------------------------------------------
 
 ### 2.9
-* 4th August 2014
+* 5th August 2014
 * REQUIRES WORDPRESS 3.6 OR ABOVE
 * Tested and verified with WordPress 3.9.1
 
@@ -143,7 +143,7 @@ Changelog
 ### 2.22
 
 * 18th June 2010
-* LAST VERSION TO BE COMPATIBILE WITH WORDPRESS 2.9
+* LAST VERSION TO BE COMPATIBLE WITH WORDPRESS 2.9
 * WordPress 3.0 first pass compatibility
 
 ### 2.21
