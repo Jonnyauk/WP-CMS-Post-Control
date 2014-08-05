@@ -336,40 +336,31 @@ function wpcms_pcontrol_validate($input) {
 * Processes common extended post control options
 *
 * @since 2.1
-* @lastupdate 2.2
+* @lastupdate 2.9
 *
 */
 function wpcms_pcontrol_validate_ex($input) {
 
 	if ($input !='') {
 
-	foreach($input as $key => $value) {
+		foreach($input as $key => $value) {
 
-			//Process the advanced option first
-		if ($key == 'revision_num') {
-			//Only allow a number, nothing else!
 			if (is_numeric($value)) {
 				$input[$key] = $value;
+			} elseif ($value == 'off') {
+				//Set value or set nothing
+				$input[$key] = ( $input[$key] == $value ? $value : '' );
 			} else {
-			//Silence is golden
+				//Silence is golden
 				$input[$key] = '';
 			}
-		}
 
-		//Only allow 'off' as option
-		elseif ($value == 'off') {
-			//Set value or set nothing
-			$input[$key] = ( $input[$key] == $value ? $value : '' );
-		} else {
-			//Silence is golden
-			$input[$key] = '';
 		}
 
 	}
 
-	}
+	return $input;
 
-return $input;
 }
 
 
