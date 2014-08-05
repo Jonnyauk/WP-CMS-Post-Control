@@ -3,7 +3,7 @@
 * Core functions options page include
 *
 * @since 2.1
-* @lastupdate 2.3
+* @lastupdate 2.9
 *
 *
 */
@@ -128,6 +128,40 @@
 			<p>The control will then appear to limit the number of revisions saved.</p>
 
 		<?php } ?>
+
+		<div id="icon-tools" class="icon32"><br /></div>
+		<h2>Limit trash auto-empty</h2>
+
+
+			<p>Control how many days trashed content stays in the trash before it is auto-deleted by WordPress (default is 30 days).</p>
+			<p>NOTE: If you set this to 0, THIS WILL REMOVE THE TRASH FUNCTIONALITY and posts will be deleted straight away when trashed!</p>
+
+			<table class="form-table">
+
+				<tr>
+					<th scope="row">Keep trashed content for how many days</th>
+					<td>
+
+				<select name="wpcms_pcontrolopts_ex[trash_num]" id="tsave">
+
+					<?php
+					$i = 0;
+
+					$saved = ( isset($options['trash_num']) ) ? $options['trash_num'] : 30;
+
+					do {
+					    echo '<option ';
+						selected( $saved, $i );
+					    echo ' class="level-'.$i.'" value="'.$i.'">'.$i.'</option>';
+					    $i++;
+					} while ($i < 101);
+					?>
+				</select>
+
+					</td>
+				</tr>
+
+			</table>
 
 		<p class="submit">
 		<input type="submit" class="button-primary" value="<?php _e('Save Post Control options') ?>" />
