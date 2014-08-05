@@ -12,17 +12,17 @@ Hides metabox controls on the write/edit post & page admin screens for each user
 
 **Post Control** from <a href="http://wp-cms.com/">WordPress CMS Modifications</a> gives you complete control over your write options **for every user level/role**. It not only allows you to hide unwanted items like custom fields, trackbacks, revisions etc. but also gives you a whole lot more control over how WordPress deals with creating content.
 
-Simplify and customise the write post and page areas of WordPress to just show the controls you need. Great for de-cluttering - do you really need those pingback and trackback options... now you can decide what each individual level of user can see and use!
+Simplify and customise the write post and page areas of WordPress to show just the controls you need. Great for de-cluttering - do you really need those pingback and trackback options, not using tags, want only administrators to be able to set categories... now you can decide what each individual level of user can see and use!
 
-It also features other advanced configuration options like disable autosaves and limit the number of revisions saved.
+It also features other advanced configuration options like disable autosaves, limit the number of revisions saved and how many days before trash is auto-emptied by WordPress.
 
-**NEW** - Control number of days before trash is emtied
+**NEW** - Control number of days before trash is emptied
 
 **NEW** - Remove word count on a per user basis (feature request)
 
 **NEW** - Control exactly how many revisions are saved when you are amending your content or even turn off revisions. This stops your database getting clogged up and is great when you are designing a site!
 
-You can control the display of the following post options for each role level (administrator, editor, author and contributor):
+You can control the display of the following post options for each core WordPress role (administrator, editor, author and contributor):
 
 * Post Author (if multiple)
 * Post Categories
@@ -113,7 +113,7 @@ Please use version 2.4 and above to fix this glitch.
 
 = I'm using v2.2x with WordPress 2.9 (or below) - post options and/or other things don't work! =
 
-2.22 was the last version with WordPRess 2.9 conpatibility. If you are using an earlier version of WordPress you really should upgrade - you get lots of cool new stuff and a faster, smarter WordPress!
+2.22 was the last version with WordPRess 2.9 compatibility. If you are using an earlier version of WordPress you really should upgrade - you get lots of cool new stuff and a faster, smarter WordPress!
 
 = I'm using v2.x and I have some error messages appear at the top of the screen. =
 
@@ -137,7 +137,7 @@ The global options you set in the main WordPress options are used.
 
 = How do I delete the option(s) out of my database permanently? =
 
-In v2.1 and above just dectivate the plugin and then delete it using the WordPress plugin page option (not just of your server via FTP!). When the plugin is deleted through WordPress, it also deletes the option(s) from the database options table that are created.
+In v2.1 and above just deactivate the plugin and then delete it using the WordPress plugin page option (not just of your server via FTP!). When the plugin is deleted through WordPress, it also deletes the option(s) from the database options table that are created.
 
 = What happens if I activate/deactivate this plugin? =
 
@@ -171,7 +171,7 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 == Changelog ==
 
 = 2.9 =
-* 4th August 2014
+* 5th August 2014
 * REQUIRES WORDPRESS 3.6 OR ABOVE
 * Tested and verified with WordPress 3.9.1
 
@@ -226,7 +226,7 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 = 2.22 =
 
 * 18th June 2010
-* LAST VERSION TO BE COMPATIBILE WITH WORDPRESS 2.9
+* LAST VERSION TO BE COMPATIBLE WITH WORDPRESS 2.9
 * WordPress 3.0 first pass compatibility
 
 = 2.21 =
