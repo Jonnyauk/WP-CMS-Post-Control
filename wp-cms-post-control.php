@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP-CMS Post Control
-Version: 2.82
+Version: 2.9
 Plugin URI: http://wp-cms.com/our-wordpress-plugins/wp-cms-post-control-plugin/
-Description: Hides unwanted items within the write/edit screens and options for each user role. Also controls autosave, revisions and flash uploader.
+Description: Hides unwanted items within the write/edit screens and options for each user role. Also controls autosave, revisions, trash time and flash uploader.
 Author: Jonny Allbut
 Author URI: http://jonnya.net
 License: GPL
@@ -14,18 +14,19 @@ View readme.txt in this directory for full documentation or view documentation o
 Official download repository: http://wordpress.org/extend/plugins/wp-cms-post-control - The latest version (and all older versions) of Post Control should always be downloaded from here only.
 
 NOTE COMPATIBILITY VERSIONS
- 
+
 - The latest version of this plugin always supports the current latest public release of WordPress
 - Compatibility with older versions is not supported
 - You really should upgrade your version of WordPress to make it faster, secure and get more features!
 
+v2.9  - Tested against WordPress 3.9.1
 v2.82 - Tested against WordPress 3.81
 v2.81 - Tested against WordPress 3.61
-v2.8 - Tested against WordPress 3.61
-v2.7 - Tested against WordPress 3.6
-v2.6 - Last version to be compatible with WordPress 3.5x (no longer supported)
-v2.5 - Last version to be compatible with WordPress 3.4x (no longer supported)
-v2.4 - Last version to be compatible with WordPress 3.0x (no longer supported)
+v2.8  - Tested against WordPress 3.61
+v2.7  - Tested against WordPress 3.6
+v2.6  - Last version to be compatible with WordPress 3.5x (no longer supported)
+v2.5  - Last version to be compatible with WordPress 3.4x (no longer supported)
+v2.4  - Last version to be compatible with WordPress 3.0x (no longer supported)
 v2.22 - Last version to be compatible with WordPress 2.9x (no longer supported)
 v1.21 - Last version to be compatible with WordPress 2.8x (no longer supported)
 */
@@ -103,9 +104,10 @@ function wpcms_pcontrol_ex_init(){
 
 /**
 * Run Post Control extended functions that need to be run early
+* Controls number of revisions and days content held in trash
 *
 * @since 2.2
-* @lastupdate 2.2
+* @lastupdate 2.9
 *
 */
 function wpcms_pcontrol_ex_revisions(){
@@ -199,7 +201,7 @@ function wpcms_pcontrol_meta($links, $file) {
 *
 */
 function wpcms_pcontrol_do_page() {
-		include("inc/wp-cms-opts-pcontrol-main.php");
+	include("inc/wp-cms-opts-pcontrol-main.php");
 }
 
 
