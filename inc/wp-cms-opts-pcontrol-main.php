@@ -3,10 +3,32 @@
 * Main options page include
 *
 * @since 2.1
-* @lastupdate 2.8
-*
+* @lastupdate 3.0
 *
 */
+?>
+
+<?php
+
+// Setup 2 arrays to hold roles with relevant capabilities for form
+global $wp_roles;
+$roles = $wp_roles->get_names();
+foreach ( $roles as $role_def => $role_def_n ) {
+	$all_wp_roles_caps[] = get_role($role_def);
+}
+
+// Setup arrays of roles that have required caps
+foreach ( $all_wp_roles_caps as $wp_role_caps ) {
+
+	if ( array_key_exists('edit_posts', $wp_role_caps->capabilities) ){
+		$wp_role_edit_posts[] = $wp_role_caps->name;
+	}
+
+	if ( array_key_exists('edit_pages', $wp_role_caps->capabilities) ){
+		$wp_role_edit_pages[] = $wp_role_caps->name;
+	}
+
+}
 ?>
 
 <div class="wrap">
@@ -55,34 +77,32 @@
 			<tr>
 				<th scope="row"><?php echo $key; ?></th>
 				<td>
-				<fieldset>
-				<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
-
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_page_administrator]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_page_administrator]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_page_administrator'])) {
-						checked(''.$value.'', $options[''.$value.'_page_administrator']);
-					}
-					?>
-					 />
-					Administrator
-					</label>
+					<fieldset>
+					<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
 
 
+						<?php
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_page_editor]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_page_editor]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_page_editor'])) {
-						checked(''.$value.'', $options[''.$value.'_page_editor']);
-					}
-					?>
-					 />
-					Editor
-					</label>
+						foreach ($wp_role_edit_pages as $page_role) {
+							?>
+							<label for="wpcms_pcontrolopts[<?php echo $value; ?>_page_<?php echo $page_role; ?>]">
+							<input name="wpcms_pcontrolopts[<?php echo $value; ?>_page_<?php echo $page_role; ?>]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
+							<?php
+							if (isset($options[''.$value.'_page_'.$page_role.''])) {
+								checked(''.$value.'', $options[''.$value.'_page_'.$page_role.'']);
+							}
+							?>
+							 />
+							<?php echo ucfirst( esc_html($page_role) ); ?>
+							</label>
 
-				</fieldset></td>
+							<?php
+						}
+
+						?>
+
+					</fieldset>
+				</td>
 			</tr>
 
 			<?php
@@ -120,54 +140,30 @@
 			<tr>
 				<th scope="row"><?php echo $key; ?></th>
 				<td>
-				<fieldset>
-				<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
+					<fieldset>
+					<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_post_administrator]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_post_administrator]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_post_administrator'])) {
-						checked(''.$value.'', $options[''.$value.'_post_administrator']);
-					}
-					?>
-					 />
-					Administrator
-					</label>
+						<?php
+						foreach ($wp_role_edit_posts as $post_role) {
+							?>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_post_editor]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_post_editor]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_post_editor'])) {
-						checked(''.$value.'', $options[''.$value.'_post_editor']);
-					}
-					?>
-					 />
-					Editor
-					</label>
+							<label for="wpcms_pcontrolopts[<?php echo $value; ?>_post_<?php echo $post_role; ?>]">
+							<input name="wpcms_pcontrolopts[<?php echo $value; ?>_post_<?php echo $post_role; ?>]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
+							<?php
+							if (isset($options[''.$value.'_post_'.$post_role.''])) {
+								checked(''.$value.'', $options[''.$value.'_post_'.$post_role.'']);
+							}
+							?>
+							 />
+							<?php echo ucfirst( esc_html($post_role) ); ?>
+							</label>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_post_author]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_post_author]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_post_author'])) {
-						checked(''.$value.'', $options[''.$value.'_post_author']);
-					}
-					?>
-					 />
-					Author
-					</label>
+							<?php
+						}
+						?>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_post_contributor]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_post_contributor]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_post_contributor'])) {
-						checked(''.$value.'', $options[''.$value.'_post_contributor']);
-					}
-					?>
-					 />
-					Contributor
-					</label>
-
-				</fieldset></td>
+					</fieldset>
+				</td>
 			</tr>
 
 			<?php
@@ -195,54 +191,30 @@
 			<tr>
 				<th scope="row"><?php echo $key; ?></th>
 				<td>
-				<fieldset>
-				<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
+					<fieldset>
+					<legend class="screen-reader-text"><span><?php echo $key; ?></span></legend>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_administrator]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_administrator]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_wpcore_administrator'])) {
-						checked(''.$value.'', $options[''.$value.'_wpcore_administrator']);
-					}
-					?>
-					 />
-					Administrator
-					</label>
+							<?php
+							foreach ($wp_role_edit_posts as $core_role) {
+								?>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_editor]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_editor]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_wpcore_editor'])) {
-						checked(''.$value.'', $options[''.$value.'_wpcore_editor']);
-					}
-					?>
-					 />
-					Editor
-					</label>
+								<label for="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_<?php echo $core_role; ?>]">
+								<input name="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_<?php echo $core_role; ?>]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
+								<?php
+								if (isset($options[''.$value.'_wpcore_'.$core_role.''])) {
+									checked(''.$value.'', $options[''.$value.'_wpcore_'.$core_role.'']);
+								}
+								?>
+								 />
+								<?php echo ucfirst( esc_html($core_role) ); ?>
+								</label>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_author]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_author]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_wpcore_author'])) {
-						checked(''.$value.'', $options[''.$value.'_wpcore_author']);
-					}
-					?>
-					 />
-					Author
-					</label>
+								<?php
+							}
+							?>
 
-					<label for="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_contributor]">
-					<input name="wpcms_pcontrolopts[<?php echo $value; ?>_wpcore_contributor]" type="checkbox" id="<?php echo $value; ?>" value="<?php echo $value; ?>"
-					<?php
-					if (isset($options[''.$value.'_wpcore_contributor'])) {
-						checked(''.$value.'', $options[''.$value.'_wpcore_contributor']);
-					}
-					?>
-					 />
-					Contributor
-					</label>
-
-				</fieldset></td>
+					</fieldset>
+				</td>
 			</tr>
 
 			<?php
