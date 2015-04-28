@@ -2,8 +2,8 @@
 Contributors: Jonnyauk
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
 Requires at least: 3.6
-Tested up to: 3.9.1
-Stable tag: 2.91
+Tested up to: 4.2.1
+Stable tag: 2.92
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave, trash time and saved revisions.

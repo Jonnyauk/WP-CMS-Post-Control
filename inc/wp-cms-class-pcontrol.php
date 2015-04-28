@@ -7,9 +7,7 @@ class wpcms_pcontrol {
 	* Executes on 'edit page' and 'new page'
 	*
 	* @since 2.0
-	* @lastupdate 2.0
-	*
-	*
+	* @lastupdate 2.92
 	*/
 	function pccore_page() {
 
@@ -19,14 +17,16 @@ class wpcms_pcontrol {
 		// Get user level and load options
 		$myrole = $wpcms_pcpage_doit->pcore_userrole();
 		$options = get_option('wpcms_pcontrolopts');
-		$boxes = $options['pc_'.$myrole.'_pageops'];
-		$extraops = $options['pc_'.$myrole.'_wpcoreops'];
 
 		//Box controls
-		$wpcms_pcpage_doit->pccore_metabox_helper('page', $boxes);
+		if ( is_array($options) && array_key_exists('pc_'.$myrole.'_pageops', $options) ){
+			$wpcms_pcpage_doit->pccore_metabox_helper('page', $options['pc_'.$myrole.'_pageops']);
+		}
 
 		//Extra controls
-		$wpcms_pcpage_doit->pccore_functionremove($extraops);
+		if ( is_array($options) && array_key_exists('pc_'.$myrole.'_wpcoreops', $options) ){
+			$wpcms_pcpage_doit->pccore_functionremove($options['pc_'.$myrole.'_wpcoreops']);
+		}
 
 	}
 
@@ -35,9 +35,7 @@ class wpcms_pcontrol {
 	* Executes on 'edit post' and 'new post'
 	*
 	* @since 2.0
-	* @lastupdate 2.5
-	*
-	*
+	* @lastupdate 2.92
 	*/
 	function pccore_post() {
 
@@ -47,14 +45,16 @@ class wpcms_pcontrol {
 		// Get user level and load options
 		$myrole = $wpcms_pcpost_doit->pcore_userrole();
 		$options = get_option('wpcms_pcontrolopts');
-		$boxes = $options['pc_'.$myrole.'_postops'];
-		$extraops = $options['pc_'.$myrole.'_wpcoreops'];
 
 		//Box controls
-		$wpcms_pcpost_doit->pccore_metabox_helper('post', $boxes);
+		if ( is_array($options) && array_key_exists('pc_'.$myrole.'_postops', $options) ){
+			$wpcms_pcpost_doit->pccore_metabox_helper('page', $options['pc_'.$myrole.'_postops']);
+		}
 
 		//Extra controls
-		$wpcms_pcpost_doit->pccore_functionremove($extraops);
+		if ( is_array($options) && array_key_exists('pc_'.$myrole.'_wpcoreops', $options) ){
+			$wpcms_pcpost_doit->pccore_functionremove($options['pc_'.$myrole.'_wpcoreops']);
+		}
 
 	}
 
