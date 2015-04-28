@@ -2,9 +2,9 @@
 
 Latest stable realease: <a href="http://wordpress.org/extend/plugins/wp-cms-post-control/">Official WordPress plugin directory</a>
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
-Requires at least WordPress: 3.6
-Tested up to WordPress: 3.9.1
-Stable tag (WordPress SVN): 2.91
+Requires at least: 3.6
+Tested up to: 4.2.1
+Stable tag: 2.92
 License: GPLv2 or later
 
 ### Post Control gives you complete control over your write options **for every user level/role**. It not only allows you to hide unwanted items like custom fields, trackbacks, revisions etc. but also gives you a whole lot more control over how WordPress deals with creating content.
@@ -86,6 +86,11 @@ Please visit <a href="http://wordpress.org/plugins/wp-cms-post-control/">officia
 
 Changelog
 ----------------------------------------------------------------------
+
+### 2.92
+* 28th April 2015
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Tested and verified with WordPress 4.2.1
 
 ### 2.91
 * 11th August 2014
@@ -234,7 +239,7 @@ Changelog
 * Option to disable autosaves
 
 ### v0.4
-1st August 2008
+* 1st August 2008
 * Option to select uploader (Flash or standard)
 * Option to hide revisions control
 * Option to hide word count
