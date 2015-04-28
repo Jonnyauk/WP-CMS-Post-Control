@@ -170,6 +170,12 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Changelog ==
 
+= 2.92 =
+* 28th April 2015
+* REQUIRES WORDPRESS 3.6 OR ABOVE
+* Tested and verified with WordPress 4.2.1
+* Fixed issue with options array
+
 = 2.91 =
 * 11th August 2014
 * REQUIRES WORDPRESS 3.6 OR ABOVE
@@ -274,49 +280,49 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Introduced multi-user level controls
 * New remove media upload control
 
-= v1.2.1 =
+= 1.2.1 =
 * 31st March 2009
 * WordPress 2.7 author control
 
-= v1.2 =
+= 1.2 =
 * 17th December 2008
 * WordPress 2.7 compatibility build, re-write plugin controls to support new 'Crazy Horse' interface
 * Fix basic text formatting in custom message box, remove strip slashes to allow basic formatting like <b> and <i>
 * Changed option array function for more control
 * Changed formatting of plugin options buttons
 
-= v1.11 =
+= 1.11 =
 * 6th September 2008
 * Option to hide editor sidebar shortcuts and 'Press It' function
 * Remove redundant preview code
 * Improved formatting for message box text and title input
 
-= v1.1 =
+= 1.1 =
 * 5th September 2008
 * Found potential conflict with options variables declared within a theme functions file
 * Conflicting PHP variables for reference - 'options' and 'newoptions'
 * Should solve conflicts with wrongly coded variables from other plugins/themes
 
-= v1.03 =
+= 1.03 =
 * 4th September 2008
 * Fix the bug introduced in v1.02 that broke the form fields
 * After comments feedback, changed and documented admin control
 
-= v1.02 =
+= 1.02 =
 * 3rd September 2008
 * Bug catches, may help plugin compatibility on different servers
 
-= v1.01 =
+= 1.01 =
 * 2nd August 2008
 * Option to insert message panel
 * General tidying on admin page
 
-= v1.0 =
+= 1.0 =
 * 1st August 2008
 * Option to disable post and page revisions
 * Option to disable autosaves
 
-= v0.4 =
+= 0.4 =
 1st August 2008
 * Option to select uploader (Flash or standard)
 * Option to hide revisions control
@@ -325,15 +331,18 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Fixed page custom field control
 * Redesigned admin page
 
-= v0.3 =
+= 0.3 =
 * 28th July 2008
 * Introduced Admin user control
 
-= v0.2 =
+= 0.2 =
 * 26th July 2008
 * Included clean-up of database on de-activation
 
 == Upgrade Notice ==
+
+= 2.92 =
+REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.2.x - important fixes for options handling bug.
 
 = 2.91 =
 REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.9x - introduces new trash control and fixes WordPress plugin update.

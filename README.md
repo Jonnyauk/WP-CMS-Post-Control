@@ -91,6 +91,7 @@ Changelog
 * 28th April 2015
 * REQUIRES WORDPRESS 3.6 OR ABOVE
 * Tested and verified with WordPress 4.2.1
+* Fixed issue with options array
 
 ### 2.91
 * 11th August 2014
