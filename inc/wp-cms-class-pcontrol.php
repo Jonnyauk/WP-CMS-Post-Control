@@ -35,7 +35,7 @@ class wpcms_pcontrol {
 	* Executes on 'edit post' and 'new post'
 	*
 	* @since 2.0
-	* @lastupdate 2.92
+	* @lastupdate 2.93
 	*/
 	function pccore_post() {
 
@@ -48,7 +48,7 @@ class wpcms_pcontrol {
 
 		//Box controls
 		if ( is_array($options) && array_key_exists('pc_'.$myrole.'_postops', $options) ){
-			$wpcms_pcpost_doit->pccore_metabox_helper('page', $options['pc_'.$myrole.'_postops']);
+			$wpcms_pcpost_doit->pccore_metabox_helper('post', $options['pc_'.$myrole.'_postops']);
 		}
 
 		//Extra controls
@@ -123,8 +123,8 @@ class wpcms_pcontrol_engine {
 			}
 		}
 	}
-	
-	
+
+
 	/**
 	* Inserts CSS to hide word-count (JS is used to interact with this text, so doesn't disappear if script deregistered)
 	*
