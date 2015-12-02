@@ -3,7 +3,7 @@ Contributors: Jonnyauk
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 2.93
+Stable tag: 2.931
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave, trash time and saved revisions.
@@ -170,7 +170,7 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Changelog ==
 
-= 2.93 =
+= 2.931 =
 * 2nd December 2015
 * Tested and verified upto WordPress 4.4
 * Fixed issue with post options
@@ -240,7 +240,6 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Compatibility with WordPress 3.0 page editing
 
 = 2.22 =
-
 * 18th June 2010
 * LAST VERSION TO BE COMPATIBLE WITH WORDPRESS 2.9
 * WordPress 3.0 first pass compatibility
@@ -345,6 +344,9 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 * Included clean-up of database on de-activation
 
 == Upgrade Notice ==
+
+= 2.931 =
+REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.
 
 = 2.93 =
 REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.

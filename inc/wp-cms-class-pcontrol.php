@@ -35,7 +35,7 @@ class wpcms_pcontrol {
 	* Executes on 'edit post' and 'new post'
 	*
 	* @since 2.0
-	* @lastupdate 2.93
+	* @lastupdate 2.931
 	*/
 	function pccore_post() {
 

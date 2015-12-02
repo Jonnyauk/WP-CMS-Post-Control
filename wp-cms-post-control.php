@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP-CMS Post Control
-Version: 2.92
+Version: 2.931
 Plugin URI: http://wp-cms.com/our-wordpress-plugins/wp-cms-post-control-plugin/
 Description: Hides unwanted items within the write/edit screens and options for each user role. Also controls autosave, revisions, trash time and flash uploader.
 Author: Jonny Allbut
@@ -11,7 +11,7 @@ License: GPL
 
 /*
 View readme.txt in this directory for full documentation or view documentation online at http://wordpress.org/extend/plugins/wp-cms-post-control
-Official download repository: http://wordpress.org/extend/plugins/wp-cms-post-control - The latest version (and all older versions) of Post Control should always be downloaded from here only.
+Official download repository: http://wordpress.org/extend/plugins/wp-cms-post-control - The latest version (and all older versions) of Post Control should ONLY be downloaded from here only.
 
 NOTE COMPATIBILITY VERSIONS
 
@@ -19,6 +19,7 @@ NOTE COMPATIBILITY VERSIONS
 - Compatibility with older versions is not supported
 - You really should upgrade your version of WordPress to make it faster, secure and get more features!
 
+v2.931 - Tested against WordPress 4.4RC1
 v2.92 - Tested against WordPress 4.2.1
 v2.91 - Fix WordPress plugin update
 v2.9  - Tested against WordPress 3.9.1
