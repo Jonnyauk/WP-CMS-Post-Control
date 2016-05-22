@@ -141,24 +141,30 @@ class wpcms_pcontrol_engine {
 	* Returns user role of logged in user
 	*
 	* @since 2.0
-	* @lastupdate 2.0
+	* @lastupdate 2.940
 	*
 	* @return User role: 'administrator', 'editor', 'author', 'contributor', subscriber'
 	*/
-	function pcore_userrole() {
-	global $current_user;
-	get_currentuserinfo();
-	$theuser = new WP_User( $current_user->ID );
+	function pcore_userrole() {	global $current_user;
 
-	if ( !empty( $theuser->roles ) && is_array( $theuser->roles ) ) {
-	foreach ( $theuser->roles as $role )
-	$theuserrole=$role;
-	}
+		// BACKPAT: get_currentuserinfo() is deprecated in version 4.5
+		if ( $this->wp_version < 4.5 ) {
+			get_currentuserinfo();
+		} else {
+			wp_get_current_user();
+		}
 
-	return $theuserrole;
+		$theuser = new WP_User( $current_user->ID );
+
+		if ( !empty( $theuser->roles ) && is_array( $theuser->roles ) ) {
+		foreach ( $theuser->roles as $role )
+		$theuserrole=$role;
+		}
+
+		return $theuserrole;
+
 	}
 
 }
-
 
 ?>

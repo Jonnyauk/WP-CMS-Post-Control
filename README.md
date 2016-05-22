@@ -4,7 +4,7 @@ Latest stable realease: <a href="http://wordpress.org/extend/plugins/wp-cms-post
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 2.931
+Stable tag: 2.940
 License: GPLv2 or later
 
 ### Post Control gives you complete control over your write options **for every user level/role**. It not only allows you to hide unwanted items like custom fields, trackbacks, revisions etc. but also gives you a whole lot more control over how WordPress deals with creating content.
@@ -87,6 +87,11 @@ Please visit <a href="http://wordpress.org/plugins/wp-cms-post-control/">officia
 Changelog
 ----------------------------------------------------------------------
 
+### 2.940
+* 22nd May 2016
+* Tested and verified upto WordPress 4.5
+* Fixed bug with get_currentuserinfo() deprecated since WordPress version 4.5
+
 ### 2.931
 * 2nd December 2015
 * Tested and verified upto WordPress 4.4
@@ -94,50 +99,50 @@ Changelog
 
 ### 2.92
 * 28th April 2015
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Tested and verified with WordPress 4.2.1
 * Fixed issue with options array
 
 ### 2.91
 * 11th August 2014
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Tested and verified with WordPress 3.9.1
 
 ### 2.9
 * 5th August 2014
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Tested and verified with WordPress 3.9.1
 
 ### 2.82
 * 24th March 2014
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Tested and verified with WordPress 3.8x
 
 ### 2.81
 * 25th October 2013
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Improve compatibility with older versions of PHP, corrects code error from incompatible code as reported by users.
 
 ### 2.8
 * 22nd October 2013
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * New option to remove word count (as per user request)
 
 ### 2.7
 * 25th August 2013
-* REQUIRES WORDPRESS 3.6 OR ABOVE
+* REQUIRES WordPress 3.6 OR ABOVE
 * Code update required to support WordPress 3.6x revisions
 
 ### 2.6
 * 10th July 2013
-* REQUIRES WORDPRESS 3.5 OR ABOVE
+* REQUIRES WordPress 3.5 OR ABOVE
 * Remove legacy Flash uploader option - no longer valid or relevant
 * Added new control for comments on page edit screen
 * Changed support link to WordPress forum
 
 ### 2.5
 * 10th April 2011
-* REQUIRES WORDPRESS 3.1 OR ABOVE
+* REQUIRES WordPress 3.1 OR ABOVE
 * Create post and page control for custom post thumbnails/featured image meta panel
 * Create post and page control for slug meta panel
 * Create post control for format meta panel
@@ -145,13 +150,13 @@ Changelog
 
 ### 2.4
 * 4th November 2010
-* REQUIRES WORDPRESS 3.0 OR ABOVE
+* REQUIRES WordPress 3.0 OR ABOVE
 * Hopefully fixes update notice issues as reported by users (thanks!)
 * Increased number of post revisions available as per user request (thanks!)
 
 ### 2.3
 * 31st July 2010
-* REQUIRES WORDPRESS 3.0 OR ABOVE
+* REQUIRES WordPress 3.0 OR ABOVE
 * Fully tested and compatible with WordPress 3.0 post and page editors
 * Fixed another bug with no values set
 * Compatibility with WordPress 3.0 page editing

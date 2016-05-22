@@ -3,7 +3,7 @@ Contributors: Jonnyauk
 Tags: post, page, metabox, autosave, revisions, tags, categories, excerpt, trackbacks, custom fields, discussion, comment, author, upload, slug, featured image, word count, trash
 Requires at least: 3.6
 Tested up to: 4.4
-Stable tag: 2.931
+Stable tag: 2.940
 License: GPLv2 or later
 
 Hides metabox controls on the write/edit post & page admin screens for each user role. Also controls autosave, trash time and saved revisions.
@@ -169,6 +169,11 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 4. An example of a customised write/edit post - much simpler to use for all your users and clients!
 
 == Changelog ==
+
+= 2.940 =
+* 22nd May 2016
+* Tested and verified upto WordPress 4.5
+* Fixed bug with get_currentuserinfo() deprecated since WordPress version 4.5
 
 = 2.931 =
 * 2nd December 2015
@@ -345,44 +350,47 @@ What began as inherited code has now been completely re-written in v2.0 to use n
 
 == Upgrade Notice ==
 
+= 2.940 =
+REQUIRES WordPress 3.6 or above, verified working with WordPress v4.5 - fixed bug with get_currentuserinfo() deprecated since WordPress version 4.5.
+
 = 2.931 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.
+REQUIRES WordPress 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.
 
 = 2.93 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.
+REQUIRES WordPress 3.6 or above, verified working with WordPress v4.4RC1 - important bug fix for post options.
 
 = 2.92 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v4.2.x - important fixes for options handling bug.
+REQUIRES WordPress 3.6 or above, verified working with WordPress v4.2.x - important fixes for options handling bug.
 
 = 2.91 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.9x - introduces new trash control and fixes WordPress plugin update.
+REQUIRES WordPress 3.6 or above, verified working with WordPress v3.9x - introduces new trash control and fixes WordPress plugin update.
 
 = 2.9 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.9x - introduces new trash control!
+REQUIRES WordPress 3.6 or above, verified working with WordPress v3.9x - introduces new trash control!
 
 = 2.82 =
-REQUIRES WORDPRESS 3.6 or above, verified working with WordPress v3.8x
+REQUIRES WordPress 3.6 or above, verified working with WordPress v3.8x
 
 = 2.81 =
-REQUIRES WORDPRESS 3.6 or above, IMPORTANT UPDATE FOR ALL USERS - fixes error on activation on some versions of PHP.
+REQUIRES WordPress 3.6 or above, IMPORTANT UPDATE FOR ALL USERS - fixes error on activation on some versions of PHP.
 
 = 2.8 =
-REQUIRES WORDPRESS 3.6 or above, new control for word count.
+REQUIRES WordPress 3.6 or above, new control for word count.
 
 = 2.7 =
-REQUIRES WORDPRESS 3.6 or above, fixes revisions controls.
+REQUIRES WordPress 3.6 or above, fixes revisions controls.
 
 = 2.6 =
-REQUIRES WORDPRESS 3.5 or above, new controls and small snag catches.
+REQUIRES WordPress 3.5 or above, new controls and small snag catches.
 
 = 2.5 =
-REQUIRES WORDPRESS 3.0 or above, optimised for WordPress 3.1 - Now supports new controls for custom post thumbnail/featured image, post format and slug in WordPress 3.1.
+REQUIRES WordPress 3.0 or above, optimised for WordPress 3.1 - Now supports new controls for custom post thumbnail/featured image, post format and slug in WordPress 3.1.
 
 = 2.4 =
-REQUIRES WORDPRESS 3.0 or above - please update for various fixes!
+REQUIRES WordPress 3.0 or above - please update for various fixes!
 
 = 2.3 =
-REQUIRES WORDPRESS 3.0 or above - please update to fix page controls bug!
+REQUIRES WordPress 3.0 or above - please update to fix page controls bug!
 
 = 2.22 =
 Please upgrade for full WordPress 3.0 compatibility and get the new feature of limiting post revisions!
