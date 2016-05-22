@@ -141,14 +141,16 @@ class wpcms_pcontrol_engine {
 	* Returns user role of logged in user
 	*
 	* @since 2.0
-	* @lastupdate 2.940
+	* @lastupdate 2.942
 	*
 	* @return User role: 'administrator', 'editor', 'author', 'contributor', subscriber'
 	*/
-	function pcore_userrole() {	global $current_user;
+	function pcore_userrole() {
+
+		global $current_user;
 
 		// BACKPAT: get_currentuserinfo() is deprecated in version 4.5
-		if ( $this->wp_version < 4.5 ) {
+		if ( get_bloginfo( 'version' ) < 4.5 ) {
 			get_currentuserinfo();
 		} else {
 			wp_get_current_user();
